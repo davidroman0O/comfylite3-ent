@@ -6,7 +6,7 @@ toolchain go1.23.1
 
 require (
 	entgo.io/ent v0.14.1
-	github.com/davidroman0O/comfylite3 v0.0.0-20240918120019-b31761a6080f
+	github.com/davidroman0O/comfylite3 v0.0.0-20240918152308-bec9d78ae41b
 )
 
 require (

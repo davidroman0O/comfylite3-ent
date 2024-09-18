@@ -22,7 +22,13 @@ func main() {
 	}
 	defer comfy.Close()
 
-	db := comfylite3.OpenDB(comfy, "_fk=1", "cache=shared", "mode=rwc")
+	db := comfylite3.OpenDB(
+		comfy,
+		comfylite3.WithOption("_fk=1"),
+		comfylite3.WithOption("cache=shared"),
+		comfylite3.WithOption("mode=rwc"),
+		comfylite3.WithForeignKeys(),
+	)
 
 	client := ent.NewClient(ent.Driver(sql.OpenDB(dialect.SQLite, db)))
 	defer client.Close()
